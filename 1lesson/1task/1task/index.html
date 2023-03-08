@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1)Створити калькулятор знижок, отримати від користувача ціну товара і в консоль вивести інформацію про знижку при покупці 10 товарів ( знижка 3%) 
+інформацію при покупці 20 товарів ( знижка 5%) -->
+<!-- 2) Отримати від користувача розміри сторін прямокутника і вивести в консоль значення площі прямокутника ( це математична формула одна сторона * на іншу сторону)
+3) Самостійно порівняти за допомогою == і ===  різні типи данних і розглянути результат -->
+    <script>
+        let quantity = 30;
+        const price = parseFloat(prompt('введіть ціну товара за штуку'));
+        const discount1 = 0.97;
+        const discount2 = 0.95;
+        let cost1;
+        
+        cost1 = (10 * price) * discount1;
+        cost2 = (20 * price) * discount2;
+
+       
+        document.write('якщо ви купите 10 одиниць, то вартість буде ' + cost1 +' гривень, а якщо ви купите 20 одиниць, то вартість буде ' + cost2 +' гривень ');
+        // document.write('якщо ви купите 20 одиниць, то вартість буде' + cost2 +'гривень ');
+
+        
+    </script>
+</body>
+</html>

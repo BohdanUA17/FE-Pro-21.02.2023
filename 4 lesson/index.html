@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Напишіть функцію map(fn, array), яка приймає на вхід функцію та масив, та обробляє кожен елемент масиву цією функцією, повертаючи новий масив.
+        let array = [1, 10, 14, 25, 33, 48];
+        let result = array.map(function(elem, index) {
+            return elem * index;
+        });
+
+        console.log(result);
+
+
+
+
+        // Перепишіть функцію за допомогою оператора '?' або '||'
+        // Наступна функція повертає true, якщо параметр age більше 18. В іншому випадку вона ставить запитання confirm і повертає його результат.
+        // function checkAge(age) {
+        // if (age > 18) {
+        // return true;
+        // } else {
+        // return confirm('Батьки дозволили?');
+        // } }
+
+        let age = parseInt(prompt('Введіть ваш вік'));
+        function checkAge(age){
+            return (age > 18) ? true : confirm ('Батьки дозволили?');    
+        }
+
+        console.log(checkAge(age)); 
+    </script>
+</body>
+</html>

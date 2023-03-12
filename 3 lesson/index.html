@@ -22,7 +22,7 @@
         document.write('Масив після методу push: ' + styles);
         document.write('<br/>');
 
-        styles.splice(1, 1, 'Класика');
+        styles[Math.floor(styles.length / 2)] = 'Класика';
         document.write('Масив після методу splice: ' + styles);
         document.write('<br/>');
         

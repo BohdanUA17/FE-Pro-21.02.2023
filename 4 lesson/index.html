@@ -9,19 +9,23 @@
 <body>
     <script>
         // Напишіть функцію map(fn, array), яка приймає на вхід функцію та масив, та обробляє кожен елемент масиву цією функцією, повертаючи новий масив.
-        let array = [0.04, 0.11, 0.25, 0.29];
+        let array = [5, 10, 15, 22, 37, 43, 75, 81, 90, 121];
 
-        function getRandomInt(array){
+        function fn(number) {
             let newArray = [];
-                for (let i = 0; i < newArray.length; i++){
-                   console.log(newArray);
+            for (let i = 0; i <= array.length; i++) {
+                if (number[i] % 3 === 0) {
+                    newArray.push(number[i]);
                 }
+            }
+        document.write("Числа, що діляться на 3: " + newArray.join());
         }
-        let result = array.map(function(elem, index) {
-            return elem * index;
-        });
-
-        console.log(result);
+        
+        function map(fn, array) {
+            return fn(array);
+        }
+        
+        map(fn, array);
 
 
 

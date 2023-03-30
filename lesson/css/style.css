@@ -1,0 +1,38 @@
+*{
+    margin: 10px;
+    padding: 10px;
+    background: black;
+}
+header{
+    height: 30px;
+    width: 100px;
+    color: aliceblue;
+    position:absolute;
+    top:60px;
+    left:150px;
+}
+.country{
+    position:absolute;
+    width: 40px;
+    height: 30px;
+    background: red;
+    color: aqua;
+}
+table {
+    width: 500px;
+    color: white;
+    font-weight: 700;
+    margin: auto;
+}
+tr {
+    height: 1.5rem;
+}
+td div{
+    background-image: url(../img/flags.jpg);
+    border: 1px solid white;
+    margin-left: 2rem;
+    width: 39px;
+    height: 24px;
+    background-size: auto;
+    /* background-position: ; */
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// Реалізуйте клас Worker (Працівник), який матиме такі властивості: name (ім'я), surname (прізвище),
+// rate (ставка за день роботи), days (кількість відпрацьованих днів).
+// Також клас повинен мати метод getSalary(), який виводитиме зарплату працівника.
+// Зарплата - це добуток (множення) ставки rate на кількість відпрацьованих днів days.
+
+class Worker {
+    constructor (name, surname, rate, days) {
+        this.name = name;
+        this.surname = surname;
+        this.rate = rate;
+        this.days = days;
+    }
+    getSalary(){
+        document.write(`Заробітня платня ${this.name} ${this.surname} за місяць становитиме: ${this.rate * this.days} гривень;<br>`)
+    }
+}
+
+const bohdan = new Worker('Богдан', 'Кос', 1500, 22);
+const vasil = new Worker('Василь', 'Пак', 1450, 22);
+
+bohdan.getSalary();
+vasil.getSalary();
+document.write('********************<br>');
+
+// Реалізуйте клас MyString, який матиме такі методи: метод reverse(),
+// який параметром приймає рядок, а повертає її в перевернутому вигляді, метод ucFirst(),
+// який параметром приймає рядок, а повертає цей же рядок, зробивши його першу літеру великою
+// та метод ucWords, який приймає рядок та робить заголовною першу літеру кожного слова цього рядка.
+
+
+function MyString(str) {
+    this.str = str;
+    this.reverse = function () {
+        return str.split('').reverse().join('');
+    }
+    this.uсFirst = function () {
+        return (str.slice(0, 1).toUpperCase() + str.slice(1));
+    }
+    this.uсWords = function () {
+        return str.split(/\s+/).map(word => word[0].toUpperCase() + word.substring(1)).join(' ')
+    }
+}
+
+var quote = new MyString('русский военный корабль, иди на*уй')
+document.write(`Метод revers: ${quote.reverse()} <br>`)
+document.write(`Метод uсFirst: ${quote.uсFirst()} <br>`)
+document.write(`Метод uсWords: ${quote.uсWords()}`)
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+/*
+Створити клас Car , Engine та Driver.
+Клас Driver містить поля - ПІБ, стаж водіння.
+Клас Engine містить поля – потужність, виробник.
+Клас Car містить поля – марка автомобіля, клас автомобіля, вага, водій типу Driver, мотор типу Engine. 
+Методи start(), stop(), turnRight(), turnLeft(), які виводять на друк: "Поїхали", "Зупиняємося", "Поворот праворуч" 
+або "Поворот ліворуч". 
+А також метод toString(), який виводить повну інформацію про автомобіль, її водія і двигуна.
+Створити похідний від Car клас - Lorry (вантажівка), що характеризується також вантажопідйомністю кузова.
+Створити похідний від Car клас - SportCar, який також характеризується граничною швидкістю.
+*/
+class car{
+    constructor(brand, clas, weight, driver, engine){
+        this.brand = brand;
+        this.clas = clas;
+        this.weight = weight;
+        this.driver = driver;
+        this.engine = engine;
+    }
+    start(){
+        console.log('Поїхали')
+    }
+    stop(){
+        console.log('Зупиняємося')
+    }
+    turnRight(){
+        console.log('Поворот праворуч')
+    }
+    turnLeft(){
+        console.log('Поворот ліворуч')
+    }
+    toString(){
+        console.log(`марка автомобіля ${this.brand}, клас автомобіля ${this.clas}, 
+            вага ${this.weight} кг., водій ${this.driver.name}, мотор ${this.engine.power} кінських сил`)
+    }
+}
+
+class driver{
+    constructor(name, experience){
+        this.name = name;
+        this.experience = experience;
+    }
+}
+
+class engine{
+    constructor(power, producer){
+        this.power = power;
+        this.producer = producer;
+    }
+}
+
+class lorry extends car{
+    constructor(brand, clas, weight, driver, engine, carryingCapacity){
+        super(brand, clas, weight, driver, engine);
+        this.carryingCapacity = carryingCapacity;
+    }
+    toString(){
+        console.log(`марка автомобіля ${this.brand}, клас автомобіля ${this.clas}, 
+            вага ${this.weight} кг., водій ${this.driver.name}, мотор ${this.engine.power} кінських сил, 
+            вантажопідйомність ${this.carryingCapacity} кг.`)
+    }
+}
+
+class sportCar extends car{
+    constructor(brand, clas, weight, driver, engine, speedLimit){
+        super(brand, clas, weight, driver, engine);
+        this.speedLimit = speedLimit;
+    }
+    toString(){
+        console.log(`марка автомобіля ${this.brand}, клас автомобіля ${this.clas}, 
+            вага ${this.weight} кг., водій ${this.driver}, мотор ${this.engine.power}, 
+            гранична швидкість ${this.speedLimit} км/год.`)
+    }
+}
+
+const dodgeDriver = new driver(`Володимир Петров`, 28);
+const bmwDriver = new driver(`Павло Мусіенко`, 29);
+const scodaDriver = new driver(`Родіон Гортенко`, 31);
+const dafDriver = new driver(`Сергій Мартиненко`, 32)
+
+const dodgeEngine = new engine(427, `Dodge Viper`);
+const bmwEngine = new engine(372, `BMW X6`);
+const scodaEngine = new engine(271, `Scoda Kodiaq`);
+const dafEngine = new engine(576, `DAF XF`);
+
+const car1 = new car(`Dodge`, `sportcar`, 1800, dodgeDriver, dodgeEngine);
+const car2 = new car(`BMW`, `sportcar`, 2500, bmwDriver, bmwEngine);
+const car3 = new car(`Scoda`, `sportcar`, 2200, scodaDriver, scodaEngine);
+
+const lorry1 = new lorry(`DAF`, `lorry`, 5000, dafDriver, dafEngine, 23000);
+
+const sportCar1 = new sportCar(car1.brand, car1.clas, car1.weight, car1.driver, car1.engine, 300);
+const sportCar2 = new sportCar(car2.brand, car2.clas, car2.weight, car2.driver, car2.engine, 300);
+const sportCar3 = new sportCar(car3.brand, car3.clas, car3.weight, car3.driver, car3.engine, 300);
+
+console.log(dodgeDriver);
+console.log(bmwDriver);
+console.log(scodaDriver);
+
+car1.toString();
+car2.toString();
+car3.toString();
+lorry1.toString();
+
+// sportCar1.toString();
+// sportCar2.toString();
+// sportCar3.toString();
+
+    </script>
+</body>
+</html>

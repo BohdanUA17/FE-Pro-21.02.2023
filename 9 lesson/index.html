@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Untitled-1.css">
+</head>
+<body>
+    <h3 id="firstTask">Завдання 1. Створіть 2 інпути та одну кнопку. Зробіть так, щоб інпути обмінювалися вмістом.</h3>
+    <hr>
+    <h3 id="secondTask">Завдання 2. Створіть 5 дів на сторінці потім використовуючи getElementsByTagName і forEath поміняйте дівам колір
+        тіла.</h3>
+    <section>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+    </section>
+    <hr>
+    <h3 id="thirdTask">Завдання 3. Cтворіть багаторядкове поле для введення тексту та кнопки.
+        Після натискання кнопки користувачем програма повинна згенерувати тег div з текстом,
+        який був у багаторядковому полі. Багаторядкове поле слід очистити після переміщення інформації</h3>
+    <hr>
+    <h3 id="fourthTask">Завдання 4. Створіть картинку та кнопку з назвою "Змінити картинку". Зробіть так щоб при натиску
+        кнопки картинка мінялась на другу, а при другому натиск на кнопку - на третю</h3>
+    <hr>
+    <h3 id="fifthTask">Завдання 5. Створює на сторінці 10 параграфів і зробіть так, щоб при натисканні на параграф він
+        зникав</h3>
+    <section class="paragraphs"></section>
+    <hr>
+    <h3 id="sixthTask">Завдання 6. Попрацювати з файлом 08. Зробити робочими всі кнопки.</h3>
+    <!--https://developer.mozilla.org/ru/docs/Web/API/Element/outerHTML-->
+    <ul id="list"><li>List Item 1</li><li>List Item 2</li><li>List Item 3</li><li>List Item 4</li><li>List Item 5</li></ul>
+    <br />
+    <input type="button" onclick="selectFirstChild()" style="width: 210px;" value="Выбрать первый элемент" /><br />
+    <input type="button" onclick="selectLastChild()" style="width: 210px;" value="Выбрать последний элемент" /><br />
+    <input type="button" onclick="selectNextNode()" style="width: 210px;" value="Выбрать следующий элемент" /><br />
+    <input type="button" onclick="selectPrevNode()" style="width: 210px;" value="Выбрать предыдущий элемент" /><br />
+    <input type="button" onclick="createNewChild()" style="width: 210px;" value="Добавить элемент" /><br />
+    <input type="button" onclick="removeLastChild()" style="width: 210px;" value="Удалить элемент" /><br />
+    <input type="button" onclick="createNewChildAtStart()" style="width: 210px;" value="Добавить  в начало" /><br />
+
+
+
+    <script src="./js/code.js"></script>
+</body>
+</html>

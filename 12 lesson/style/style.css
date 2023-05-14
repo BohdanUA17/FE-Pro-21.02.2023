@@ -1,0 +1,53 @@
+*{  margin: 0;
+    padding: 0;
+}
+.spanContainer {
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+    height: 15%;
+}
+.spanContainer span{
+    padding: 5px;
+    border: 1px solid black;
+    width: 85%;
+    border-radius: 5px;
+}
+.spanContainer button{
+    border-radius: 5px;
+    background-color: transparent;
+    margin-left: 5px;
+}
+.input{
+    display: none;
+    width: 200px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.input::placeholder{
+    color: black;
+    padding: 5px 10px;
+}
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.erorSpan{
+    color: red;
+    font-weight: 600;
+    padding: 5px ;
+}
+.green{
+    border: 5px solid green;
+}
+.red{
+    border: 5px solid red;
+}
+.colorGreen{
+    color: green;
+}
